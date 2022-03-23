@@ -1,0 +1,17 @@
+<h1><%= @hotel.name %></h1>
+<p><%= @hotel.address %></p>
+<p>Rating: <%= @hotel.rating %></p>
+
+
+<h2>Available rooms:</h2>
+  <% if @rooms %>
+<ul>
+  <% @rooms.each do | room | %>
+    <li><%= link_to room.name, room_url(room) %></li>
+  <% end %>
+</ul>
+  <% else %>
+    <p>No rooms available</p>
+  <% end %>
+
+<h3><%= link_to "Add a new room", new_hotel_room_url(@hotel) %></h3>

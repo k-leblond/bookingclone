@@ -1,0 +1,12 @@
+<h1>All hotels</h1>
+
+<ul>
+  <% @hotels.each do |hotel| %>
+    <li><%= link_to hotel.name, hotel_url(hotel) %> <%= link_to "Edit", edit_hotel_url(hotel) %> <%= link_to "Delete", hotel_url(hotel),
+                                                                                              method: :delete,
+                                                                                              data: { confirm: "Are you sure?" } %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add a new hotel", new_hotel_url %>

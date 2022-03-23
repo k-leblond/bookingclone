@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Add a new hotel</h1>
+</div>
+
+<div class="container">
+  <%= simple_form_for @hotel do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :rating, as: :range, input_html:{ min: '0', max: '5', step: '0.5' } %>
+    <%= f.submit %>
+  <% end %>
+</div>
