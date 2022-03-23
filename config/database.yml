@@ -52,3 +52,12 @@ test:
   username: kleblond
   password:
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: bookingclone
+  pool: 5
+  username: kleblond
+  password:
+  timeout: 5000
